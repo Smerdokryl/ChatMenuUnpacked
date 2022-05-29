@@ -1,0 +1,7 @@
+## Interface: 90200
+## Title: Chat Menu Unpacked
+## Notes: More chat menu buttons
+## DefaultState: Enabled
+## Author: Смердокрыл
+
+ChatMenuUnpacked.xml

@@ -1,0 +1,68 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+
+	<Script file="ChatMenuUnpacked.lua"/>
+
+	<Button virtual="true" name="ChatFrameUnpackedMenuButtonTemplate" frameStrata="LOW" parent="UIParent">
+		<Size x="32" y="32"/>
+		<NormalTexture file="Interface\Buttons\UI-SquareButton-Up"/>
+		<PushedTexture file="Interface\Buttons\UI-SquareButton-Down"/>
+		<DisabledTexture file="Interface\Buttons\UI-SquareButton-Disabled"/>
+		<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+	</Button>
+
+	<FontString virtual="true" name="UnpackedMenuButtonTextTemplate" inherits="GameFontHighlight" font="Fonts/arialn.ttf" parentKey="ButtonText">
+		<FontHeight val="18"/>
+		<Color
+			r="1"
+			g="0.843137255"
+			b="0"
+		/>
+	</FontString>
+
+	<Button name="ChatFrameVoiceMacroMenuButton" frameStrata="LOW" parent="UIParent" inherits="ChatFrameUnpackedMenuButtonTemplate">
+		<Anchors>
+			<Anchor point="BOTTOM" relativeTo="ChatFrameMenuButton" relativePoint="TOP"/>
+		</Anchors>
+		<ButtonText inherits="UnpackedMenuButtonTextTemplate" text="♫"/>
+		<Scripts>
+			<OnClick>
+				PlaySound(SOUNDKIT.IG_CHAT_EMOTE_BUTTON);
+				ChatFrame_ToggleSubMenu(self, VoiceMacroMenu, VoiceMacroMenu_Click, UnpackedVoiceMacroMenu_Click);
+			</OnClick>
+		</Scripts>
+	</Button>
+
+	<Button name="ChatFrameLanguageMenuButton" frameStrata="LOW" parent="UIParent" inherits="ChatFrameUnpackedMenuButtonTemplate">
+		<Anchors>
+			<Anchor point="BOTTOM" relativeTo="ChatFrameVoiceMacroMenuButton" relativePoint="TOP"/>
+		</Anchors>
+		<ButtonText inherits="UnpackedMenuButtonTextTemplate" text="Æ"/>
+		<Scripts>
+			<OnClick>
+				PlaySound(SOUNDKIT.IG_CHAT_EMOTE_BUTTON);
+				ChatFrame_ToggleSubMenu(self, LanguageMenu, LanguageMenu_Click, UnpackedLanguageMenu_Click);
+			</OnClick>
+		</Scripts>
+	</Button>
+
+	<Button name="ChatFrameEmoteMenuButton" frameStrata="LOW" parent="UIParent" inherits="ChatFrameUnpackedMenuButtonTemplate">
+		<Anchors>
+			<Anchor point="BOTTOM" relativeTo="ChatFrameLanguageMenuButton" relativePoint="TOP"/>
+		</Anchors>
+		<!-- I really hate how inherited FontHeight doesn't get overridden... -->
+		<ButtonText parentKey="ButtonText" inherits="GameFontHighlight" font="Fonts/arialn.ttf" text="☻">
+			<Anchors>
+				<Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER" x="-1" y="2"/>
+			</Anchors>
+			<FontHeight val="22"/>
+			<Color r="1" g="0.843137255" b="0"/>
+		</ButtonText>
+		<Scripts>
+			<OnClick>
+				PlaySound(SOUNDKIT.IG_CHAT_EMOTE_BUTTON);
+				ChatFrame_ToggleSubMenu(self, EmoteMenu, EmoteMenu_Click, UnpackedEmoteMenu_Click);
+			</OnClick>
+		</Scripts>
+	</Button>
+
+</Ui>
