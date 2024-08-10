@@ -55,5 +55,5 @@ function UnpackedVoiceMacroMenu_Click(self)
 end
 
 -- Adjust minimum height of chat window
-local w, h = ChatMenu.chatFrame:GetMinResize();
-ChatMenu.chatFrame:SetMinResize(w, h + 38);
+local w, h = ChatMenu.chatFrame:GetResizeBounds();
+ChatMenu.chatFrame:SetResizeBounds(w, h + 38);
