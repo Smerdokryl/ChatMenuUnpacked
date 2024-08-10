@@ -19,7 +19,7 @@
 		/>
 	</FontString>
 
-	<Button name="ChatFrameVoiceMacroMenuButton" frameStrata="LOW" parent="UIParent" inherits="ChatFrameUnpackedMenuButtonTemplate">
+	<Button name="ChatFrameVoiceMacroMenuButton" parent="ChatFrame1ButtonFrame" inherits="ChatFrameUnpackedMenuButtonTemplate">
 		<Anchors>
 			<Anchor point="BOTTOM" relativeTo="ChatFrameMenuButton" relativePoint="TOP"/>
 		</Anchors>
@@ -32,7 +32,7 @@
 		</Scripts>
 	</Button>
 
-	<Button name="ChatFrameLanguageMenuButton" frameStrata="LOW" parent="UIParent" inherits="ChatFrameUnpackedMenuButtonTemplate">
+	<Button name="ChatFrameLanguageMenuButton" parent="ChatFrame1ButtonFrame" inherits="ChatFrameUnpackedMenuButtonTemplate">
 		<Anchors>
 			<Anchor point="BOTTOM" relativeTo="ChatFrameVoiceMacroMenuButton" relativePoint="TOP"/>
 		</Anchors>
@@ -45,7 +45,7 @@
 		</Scripts>
 	</Button>
 
-	<Button name="ChatFrameEmoteMenuButton" frameStrata="LOW" parent="UIParent" inherits="ChatFrameUnpackedMenuButtonTemplate">
+	<Button name="ChatFrameEmoteMenuButton" parent="ChatFrame1ButtonFrame" inherits="ChatFrameUnpackedMenuButtonTemplate">
 		<Anchors>
 			<Anchor point="BOTTOM" relativeTo="ChatFrameLanguageMenuButton" relativePoint="TOP"/>
 		</Anchors>
