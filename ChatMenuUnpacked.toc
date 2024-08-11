@@ -2,6 +2,7 @@
 ## Title: Chat Menu Unpacked
 ## Notes: More chat menu buttons
 ## DefaultState: Enabled
+## Dependencies: Blizzard_ChatFrame
 ## Author: Смердокрыл
 
 ChatMenuUnpacked.xml
