@@ -3,6 +3,8 @@
  	<DropdownButton virtual="true" name="ChatMenuUnpacked_ButtonTemplate" inherits="UIMenuButtonStretchTemplate" mixin="ChatFrameMenuButtonMixin">
 		<Size x="27" y="27"/>
 
+		<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD"/>
+
 		<Scripts>
 			<OnClick method="OnClick"/>
 			<OnEvent method="OnEvent"/>
