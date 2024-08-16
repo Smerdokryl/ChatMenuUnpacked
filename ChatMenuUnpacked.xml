@@ -1,13 +1,16 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
 
-	<Button virtual="true" name="ChatFrameUnpackedMenuButtonTemplate" inherits="UIMenuButtonStretchTemplate" mixin="ChatMenuUnpackedMixin">
+ 	<DropdownButton virtual="true" name="ChatMenuUnpacked_ButtonTemplate" inherits="UIMenuButtonStretchTemplate" mixin="ChatFrameMenuButtonMixin">
 		<Size x="27" y="27"/>
 
 		<Scripts>
 			<OnClick method="OnClick"/>
+			<OnEvent method="OnEvent"/>
+			<OnShow method="OnShow"/>
 		</Scripts>
-	</Button>
+	</DropdownButton>
 
+	<Script file="ChatFrame.lua"/>
 	<Script file="ChatMenuUnpacked.lua"/>
 
 </Ui>
