@@ -1,8 +1,9 @@
-## Interface: 110000
+## Interface: 110000, 120000
 ## Title: Chat Menu Unpacked
 ## Notes: More chat menu buttons
 ## DefaultState: Enabled
 ## Dependencies: Blizzard_ChatFrame
 ## Author: Смердокрыл
+## X-Curse-Project-ID: 628711
 
 ChatMenuUnpacked.xml
